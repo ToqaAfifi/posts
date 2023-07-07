@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { Navigate, RouterProvider, createBrowserRouter } from 'react-router-dom'
+import HomeLayout from './layout/HomeLayout'
+import ErrorLayout from './layout/ErrorLayout'
+import PostsPage from './pages/PostsPage'
+import PostDetailsPage from './pages/PostDetailsPage'
+import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const router = createBrowserRouter([
+  {
+    path: '',
+    element: <HomeLayout />,
+    errorElement: <ErrorLayout />,
+    children: [
+      { path: '', element: <Navigate to='/posts' /> },
+      {
+        path: 'posts',
+        exact: true,
+        element: <PostsPage />,
+      },
+      {
+        path: 'posts/:postId',
+        exact: true,
+        element: <PostDetailsPage />,
+      }
+    ]
+  }
+])
+
+function App () {
+  return <RouterProvider router={router} />
 }
 
-export default App;
+export default App

@@ -1,0 +1,32 @@
+.headerCell {
+    color: #183a59;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.postCell {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 2% 0;
+}
+
+.postCell > span {
+    color: #1b4b7a;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.actionIcons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.actionIcons > svg :hover {
+    cursor: pointer;
+}
