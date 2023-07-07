@@ -59,7 +59,7 @@ const PostsList = ({ posts, viewDetails, deletePost }) => {
   ]
 
   return (
-    <Card style={{ width: '60%', height: 700 }}>
+    <Card className='tableCard'>
       <DataGrid
         rows={posts}
         getRowHeight={() => 'auto'}

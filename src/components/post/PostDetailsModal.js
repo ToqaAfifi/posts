@@ -7,7 +7,6 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 600,
   bgcolor: 'background.paper',
   borderTopLeftRadius: 12,
   borderBottomLeftRadius: 12,
@@ -25,7 +24,7 @@ const PostDetailsModal = ({ post, isOpen, onClose }) => {
       aria-labelledby='modal-modal-title'
       aria-describedby='modal-modal-description'
     >
-      <Box sx={style}>
+      <Box sx={style} className='postModal'>
         <Typography
           id='modal-modal-title'
           variant='h6'

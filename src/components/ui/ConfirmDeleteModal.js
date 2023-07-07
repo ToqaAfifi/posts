@@ -8,7 +8,6 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
   bgcolor: 'background.paper',
   borderTopLeftRadius: 12,
   borderBottomLeftRadius: 12,
@@ -26,7 +25,7 @@ const ConfirmDeleteModal = ({ message, isOpen, onClose, onDelete }) => {
       aria-labelledby='modal-modal-title'
       aria-describedby='modal-modal-description'
     >
-      <Box sx={style}>
+      <Box sx={style} className='deleteModal'>
         <Typography
           id='modal-modal-title'
           variant='h6'

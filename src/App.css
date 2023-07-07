@@ -76,3 +76,31 @@
   justify-content: center;
   width: 100%;
 }
+
+.tableCard {
+  width: 60%;
+  height: 700px;
+}
+
+.postModal {
+  width: 40%;
+}
+
+.deleteModal {
+  width: 25%;
+}
+
+@media (max-width: 900px) {
+  .tableCard {
+    width: 95%;
+    height: 700px;
+  }
+
+  .postModal {
+    width: 70%;
+  }
+
+  .deleteModal {
+    width: 70%;
+  }
+}
